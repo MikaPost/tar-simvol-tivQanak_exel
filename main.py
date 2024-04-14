@@ -1,3 +1,8 @@
+"""
+This file is for our new theme: tar simvol tiv Qanak in exel
+Create by: Miqayel Postoyan
+Date: 15 April
+"""
 import xlsxwriter
 
 def get_content(fname):
@@ -33,7 +38,7 @@ def writer_excel(letter_list, num_list, simvol_list):
     num_sheet = workbook.add_worksheet("Numbers")
     simvol_sheet = workbook.add_worksheet("Symbols")
 
-    write_sheet(letter_sheet, letter_list,True)
+    write_sheet(letter_sheet, letter_list, True)
     write_sheet(num_sheet, num_list)
     write_sheet(simvol_sheet, simvol_list)
 
@@ -41,7 +46,6 @@ def writer_excel(letter_list, num_list, simvol_list):
 
 def write_sheet(sheet, data_list, n=None):
     row = 0
-    a = "aeiouy"
     if n:
         vowels, consonants = sort_tarer(data_list)
         row = 1
